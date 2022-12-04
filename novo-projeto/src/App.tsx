@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import '@fontsource/roboto/500.css';
 import { TextField } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,8 +14,8 @@ import Box from '@mui/material/Box';
 import VpnKeyRoundedIcon from '@mui/icons-material/VpnKeyRounded';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import "./styles.css";
 import { blue } from '@mui/material/colors';
+import Button from '@mui/material/Button';
 <meta name="viewport" content="initial-scale=1, width=device-width" />
 
 const theme = createTheme({
@@ -63,7 +62,7 @@ export const App = () => {
               <Typography component={'h1'} variant={'h5'} textAlign={'center'}>
                 Tela de login usando ReactJS, Material UI e Typescript :)
               </Typography>
-              <Box component={'form'} sx={{ mt: 3 }} >
+              <Box component={'form'} sx={{ mt: 1 }} >
                 <TextField
                   margin='normal'
                   required
@@ -78,7 +77,26 @@ export const App = () => {
                 required
                 fullWidth /* pra deixar o input ocupar toda a box */
                 label='Senha'
+                type={'password'}
+                id='password'
                 />
+                <FormControlLabel 
+                control={<Checkbox value='lembrar-me' color='primary'/>}
+                label='lembrar-me'
+                />
+
+                <Grid container>
+                  <Grid item xs>
+                    <Link href="#" variant="body2">
+                      Esqueceu a senha?
+                    </Link>
+                  </Grid>
+                  <Grid item>
+                    <Link href="#" variant='body2'>
+                    {"Criar conta"}
+                    </Link>
+                  </Grid>
+                </Grid>
               </Box>
             </Box>
           </Container>
