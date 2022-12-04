@@ -22,10 +22,10 @@ const theme = createTheme({
   palette: {
     primary: blue,
     background: {
-      default: "" /* cor de fundo */
+      /* default: ""  cor de fundo */
     },
     text: {
-     primary: "" /* cor dos textos */
+     /* primary: ""  cor dos textos */
     },
   },
 
@@ -49,14 +49,14 @@ export const App = () => {
             <CssBaseline />
             <Box
               sx={{
-                marginTop: 8,
+                marginTop: 22,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
               }}
             >
               {/* icone que é importado em VpnKeyRoundedIcon */}
-              <Avatar sx={{ m: 1, bgcolor: 'blueviolet' }}>
+              <Avatar sx={{ m: 1, bgcolor: '#4DA9FF' }}>
                 <VpnKeyRoundedIcon />  
               </Avatar>
               <Typography component={'h1'} variant={'h5'} textAlign={'center'}>
@@ -84,7 +84,12 @@ export const App = () => {
                 control={<Checkbox value='lembrar-me' color='primary'/>}
                 label='lembrar-me'
                 />
-
+                            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              >entrar</Button>
                 <Grid container>
                   <Grid item xs>
                     <Link href="#" variant="body2">
